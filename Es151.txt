@@ -1,0 +1,86 @@
+Versione con i mesi considerati come numeri:
+
+package es.pkg151;
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int mese;
+        int n = 0;
+        int n1 = 1;
+        int n2 = 1;
+        int n3;
+        do {
+        System.out.println("Inserisci il numero del mese");
+        mese = in.nextInt();
+        switch (mese){
+                case 1: n = 0;break;
+                case 2: n = 0;break;
+                case 3: n = 1;break;
+                case 4: n = 2;break;
+                case 5: n = 3;break;
+                case 6: n = 4;break;
+                case 7: n = 5;break;
+                case 8: n = 6;break;
+                case 9: n = 7;break;
+                case 10: n = 8;break;
+                case 11: n = 9;break;
+                case 12: n = 10;break;
+                default: System.out.println("Non esiste questo mese"); break;
+        }
+     } while (mese == 0);
+     if (n == 0) { 
+         System.out.println("Il numero è 1");
+     } else { 
+         for (int i = 0; i < n; i++) {
+             n3 = n2;
+             n2 = n1+n2;
+             n1 = n3;
+         }
+         System.out.println("Il numero è "+n2);
+     }
+    }
+}
+
+
+
+
+Versione con mesi come stringhe
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String mese;
+        int n = 0;
+        int n1 = 1;
+        int n2 = 1;
+        int n3;
+        do {
+        System.out.println("Inserisci il numero del mese");
+        mese = in.nextLine();
+        switch (mese){
+                case "Gennaio": n = 0;break;
+                case "Febbraio": n = 0;break;
+                case "Marzo": n = 1;break;
+                case "Aprile": n = 2;break;
+                case "Maggio": n = 3;break;
+                case "Giugno": n = 4;break;
+                case "Luglio": n = 5;break;
+                case "Agosto": n = 6;break;
+                case "Settembre": n = 7;break;
+                case "Ottobre": n = 8;break;
+                case "Novembre": n = 9;break;
+                case "Dicembre": n = 10;break;
+        }
+     } while (mese == "");
+     if (n == 0) { 
+         System.out.println("Il numero è 1");
+     } else { 
+         for (int i = 0; i < n; i++) {
+             n3 = n2;
+             n2 = n1+n2;
+             n1 = n3;
+         }
+         System.out.println("Il numero è "+n2);
+     }
+    }
+}
+
